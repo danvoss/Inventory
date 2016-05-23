@@ -45,7 +45,13 @@ public class Main {
                     inventory.remove(removeInt - 1);
                     break;
                 case "3":
-                    //
+                    System.out.println("Enter the index number of the item to be updated.");
+                    String update = scanner.nextLine();
+                    int updateInt = Integer.valueOf(update);
+                    System.out.println("Enter the new quantity.");
+                    String quant = scanner.nextLine();
+                    InventoryItem updateName = inventory.get(updateInt - 1);
+                    updateName.setQuantity(Integer.valueOf(quant));
                     break;
                 default:
                     System.out.println("Invalid option.");
