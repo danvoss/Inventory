@@ -33,10 +33,16 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    //
+                    System.out.println("Enter the name of the new item.");
+                    String newName = scanner.nextLine();
+                    InventoryItem newItem = new InventoryItem(newName, 1);
+                    inventory.add(newItem);
                     break;
                 case "2":
-                    //
+                    System.out.println("Enter the index number of the item to be removed.");
+                    String remove = scanner.nextLine();
+                    int removeInt = Integer.valueOf(remove);
+                    inventory.remove(removeInt - 1);
                     break;
                 case "3":
                     //
@@ -44,9 +50,6 @@ public class Main {
                 default:
                     System.out.println("Invalid option.");
             }
-
-
-
 
         }
     }
