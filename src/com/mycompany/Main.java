@@ -9,14 +9,19 @@ public class Main {
 
         ArrayList<InventoryItem> inventory = new ArrayList<>();
 
-        InventoryItem item1 = new InventoryItem("apple", 10);
+        InventoryItem item1 = new InventoryItem("apples", 10);
         inventory.add(item1);
-        InventoryItem item2 = new InventoryItem("banana", 5);
+        InventoryItem item2 = new InventoryItem("bananas", 5);
         inventory.add(item2);
 
         while (true) {
 
             System.out.println("Here is your inventory: ");
+
+            for (InventoryItem item : inventory) {
+                System.out.println((inventory.indexOf(item) + 1) + ".) " + item.itemName + " " + "[" +
+                        item.quantity + "]");
+            }
 
             System.out.println("What would you like to do?:");
             System.out.println("1. Create a new item");
