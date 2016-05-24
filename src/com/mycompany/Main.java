@@ -44,8 +44,9 @@ public class Main {
             System.out.println("Here is your inventory: ");
 
             for (InventoryItem item : inventory) {
-                System.out.println((inventory.indexOf(item) + 1) + ".) " + item.itemName + " " + "[" +
-                        item.quantity + "]");
+                System.out.printf("%s.) %s [%s]\n", (inventory.indexOf(item) + 1), item.itemName, item.quantity);
+//                System.out.println((inventory.indexOf(item) + 1) + ".) " + item.itemName + " " + "[" +
+//                        item.quantity + "]");
             }
 
             System.out.println("What would you like to do? Enter a number:");
