@@ -23,7 +23,7 @@ public class Main {
                         item.quantity + "]");
             }
 
-            System.out.println("What would you like to do?:");
+            System.out.println("What would you like to do? Enter a number:");
             System.out.println("1. Create a new item");
             System.out.println("2. Remove an item");
             System.out.println("3. Update item quantity");
@@ -39,13 +39,13 @@ public class Main {
                     inventory.add(newItem);
                     break;
                 case "2":
-                    System.out.println("Enter the index number of the item to be removed.");
+                    System.out.println("Enter the number of the item to be removed.");
                     String remove = scanner.nextLine();
                     int removeInt = Integer.valueOf(remove);
                     inventory.remove(removeInt - 1);
                     break;
                 case "3":
-                    System.out.println("Enter the index number of the item to be updated.");
+                    System.out.println("Enter the number of the item to be updated.");
                     String update = scanner.nextLine();
                     int updateInt = Integer.valueOf(update);
                     System.out.println("Enter the new quantity.");
