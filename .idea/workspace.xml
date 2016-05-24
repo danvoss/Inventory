@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="29fdcfbb-cc30-4ba4-9646-d0b257472cec" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mycompany/Main.java" afterPath="$PROJECT_DIR$/src/com/mycompany/Main.java" />
     </list>
     <ignored path="Inventory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -475,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464034791643</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Improve text">
+      <created>1464093111869</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1464093111869</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -527,7 +533,8 @@
     <MESSAGE value="Add corrected ArrayList" />
     <MESSAGE value="Add options to add/remove" />
     <MESSAGE value="Finish program - unrefactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish program - unrefactored" />
+    <MESSAGE value="Improve text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve text" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
