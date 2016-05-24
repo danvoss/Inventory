@@ -5,6 +5,31 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
+        System.out.println("Enter the name of the new item.");
+        String newName = scanner.nextLine();
+        InventoryItem newItem = new InventoryItem(newName, 1);
+        inventory.add(newItem);
+    }
+
+    public static void removeItem (Scanner scanner, ArrayList<InventoryItem> inventory) {
+        System.out.println("Enter the number of the item to be removed.");
+        String remove = scanner.nextLine();
+        int removeInt = Integer.valueOf(remove);
+        inventory.remove(removeInt - 1);
+    }
+
+    public static void updateQuantity (Scanner scanner, ArrayList<InventoryItem> inventory) {
+        System.out.println("Enter the number of the item to be updated.");
+        String update = scanner.nextLine();
+        int updateInt = Integer.valueOf(update);
+        System.out.println("Enter the new quantity.");
+        String quant = scanner.nextLine();
+        InventoryItem updateName = inventory.get(updateInt - 1);
+        updateName.setQuantity(Integer.valueOf(quant));
+    }
+
+
     public static void main(String[] args) {
 
         ArrayList<InventoryItem> inventory = new ArrayList<>();
@@ -33,25 +58,13 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.println("Enter the name of the new item.");
-                    String newName = scanner.nextLine();
-                    InventoryItem newItem = new InventoryItem(newName, 1);
-                    inventory.add(newItem);
+                    enterNew(scanner, inventory);
                     break;
                 case "2":
-                    System.out.println("Enter the number of the item to be removed.");
-                    String remove = scanner.nextLine();
-                    int removeInt = Integer.valueOf(remove);
-                    inventory.remove(removeInt - 1);
+                    removeItem(scanner, inventory);
                     break;
                 case "3":
-                    System.out.println("Enter the number of the item to be updated.");
-                    String update = scanner.nextLine();
-                    int updateInt = Integer.valueOf(update);
-                    System.out.println("Enter the new quantity.");
-                    String quant = scanner.nextLine();
-                    InventoryItem updateName = inventory.get(updateInt - 1);
-                    updateName.setQuantity(Integer.valueOf(quant));
+                    updateQuantity(scanner, inventory);
                     break;
                 default:
                     System.out.println("Invalid option.");
