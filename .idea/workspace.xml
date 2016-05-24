@@ -612,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464108426574</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add inheritance classes">
+      <created>1464108971020</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1464108971020</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -667,7 +674,8 @@
     <MESSAGE value="Improve text" />
     <MESSAGE value="Refactor (first attempt)" />
     <MESSAGE value="Add string formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add string formatting" />
+    <MESSAGE value="Add inheritance classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add inheritance classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
