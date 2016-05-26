@@ -5,12 +5,31 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
+  public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
         System.out.println("Enter the name of the new item.");
         String newName = scanner.nextLine();
         InventoryItem newItem = new InventoryItem(newName, 1);
         inventory.add(newItem);
-    }
+  }
+
+//    public static InventoryItem createItem(String name, int quantity, String category) {
+//        switch (category) {
+//            case "Fruit":
+//                return new Fruit(name, quantity);
+//            case "Vegetable":
+//                return new Vegetable();
+//            case "Dairy":
+//                return new Dairy();
+//            case "Beef":
+//                return new Beef();
+//            case "Poultry":
+//                return new Poultry();
+//            default:
+//                System.out.println("Enter a valid category.");
+//        }
+//    }
+
+
 
     public static void removeItem (Scanner scanner, ArrayList<InventoryItem> inventory) {
         System.out.println("Enter the number of the item to be removed.");
@@ -26,7 +45,9 @@ public class Main {
         System.out.println("Enter the new quantity.");
         String quant = scanner.nextLine();
         InventoryItem updateName = inventory.get(updateInt - 1);
-        updateName.setQuantity(Integer.valueOf(quant));
+        //updateName.setQuantity(Integer.valueOf(quant));
+        //instead of last line: ??
+        updateName.quantity = Integer.valueOf(quant);
     }
 
 
@@ -34,10 +55,10 @@ public class Main {
 
         ArrayList<InventoryItem> inventory = new ArrayList<>();
 
-        InventoryItem item1 = new InventoryItem("apples", 10);
-        inventory.add(item1);
-        InventoryItem item2 = new InventoryItem("bananas", 5);
-        inventory.add(item2);
+//        InventoryItem item1 = new InventoryItem("apples", 10, "Fruit");
+//        inventory.add(item1);
+//        InventoryItem item2 = new InventoryItem("bananas", 5, "Fruit");
+//        inventory.add(item2);
 
         while (true) {
 
@@ -59,7 +80,7 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    enterNew(scanner, inventory);
+                  enterNew(scanner, inventory);
                     break;
                 case "2":
                     removeItem(scanner, inventory);
