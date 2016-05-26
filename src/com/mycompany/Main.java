@@ -12,22 +12,23 @@ public class Main {
         inventory.add(newItem);
   }
 
-//    public static InventoryItem createItem(String name, int quantity, String category) {
-//        switch (category) {
-//            case "Fruit":
-//                return new Fruit(name, quantity);
-//            case "Vegetable":
-//                return new Vegetable();
-//            case "Dairy":
-//                return new Dairy();
-//            case "Beef":
-//                return new Beef();
-//            case "Poultry":
-//                return new Poultry();
-//            default:
-//                System.out.println("Enter a valid category.");
-//        }
-//    }
+    public static InventoryItem createItem(String itemName, int quantity, String category) {
+        switch (category) {
+            case "Fruit":
+                return new Fruit(itemName, quantity, category);
+            case "Vegetable":
+                return new Vegetable(itemName, quantity, category);
+            case "Dairy":
+                return new Dairy(itemName, quantity, category);
+            case "Beef":
+                return new Beef(itemName, quantity, category);
+            case "Poultry":
+                return new Poultry(itemName, quantity, category);
+            default:
+                System.out.println("Enter a valid category.");
+        }
+        return null;
+    }
 
 
 
@@ -45,8 +46,6 @@ public class Main {
         System.out.println("Enter the new quantity.");
         String quant = scanner.nextLine();
         InventoryItem updateName = inventory.get(updateInt - 1);
-        //updateName.setQuantity(Integer.valueOf(quant));
-        //instead of last line: ??
         updateName.quantity = Integer.valueOf(quant);
     }
 
@@ -66,8 +65,6 @@ public class Main {
 
             for (InventoryItem item : inventory) {
                 System.out.printf("%s.) %s [%s]\n", (inventory.indexOf(item) + 1), item.itemName, item.quantity);
-//                System.out.println((inventory.indexOf(item) + 1) + ".) " + item.itemName + " " + "[" +
-//                        item.quantity + "]");
             }
 
             System.out.println("What would you like to do? Enter a number:");
