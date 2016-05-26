@@ -68,6 +68,7 @@ public class Main {
             }
 
             System.out.println("What would you like to do? Enter a number:");
+            // add createItem() method & option
             System.out.println("1. Create a new item");
             System.out.println("2. Remove an item");
             System.out.println("3. Update item quantity");
