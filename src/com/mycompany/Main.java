@@ -8,7 +8,7 @@ public class Main {
     public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
         System.out.println("Enter the name of the new item.");
         String newName = scanner.nextLine();
-        InventoryItem newItem = new InventoryItem(newName, 1);
+        InventoryItem newItem = new InventoryItem(newName, 1); //call createItem function here, ask user to input category
         inventory.add(newItem);
   }
 
@@ -71,7 +71,7 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                  enterNew(scanner, inventory);
+                    enterNew(scanner, inventory);
                     break;
                 case "2":
                     removeItem(scanner, inventory);
