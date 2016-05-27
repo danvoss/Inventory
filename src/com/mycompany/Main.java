@@ -5,12 +5,29 @@ import java.util.Scanner;
 
 public class Main {
 
-  public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
+    public static void enterNew (Scanner scanner, ArrayList<InventoryItem> inventory) {
         System.out.println("Enter the name of the new item.");
         String newName = scanner.nextLine();
         InventoryItem newItem = new InventoryItem(newName, 1);
         inventory.add(newItem);
   }
+
+    public static void removeItem (Scanner scanner, ArrayList<InventoryItem> inventory) {
+        System.out.println("Enter the number of the item to be removed.");
+        String remove = scanner.nextLine();
+        int removeInt = Integer.valueOf(remove);
+        inventory.remove(removeInt - 1);
+    }
+
+    public static void updateQuantity (Scanner scanner, ArrayList<InventoryItem> inventory) {
+        System.out.println("Enter the number of the item to be updated.");
+        String update = scanner.nextLine();
+        int updateInt = Integer.valueOf(update);
+        System.out.println("Enter the new quantity.");
+        String quant = scanner.nextLine();
+        InventoryItem updateName = inventory.get(updateInt - 1);
+        updateName.quantity = Integer.valueOf(quant);
+    }
 
     public static InventoryItem createItem(String itemName, int quantity, String category) {
         switch (category) {
@@ -31,45 +48,21 @@ public class Main {
     }
 
 
-
-    public static void removeItem (Scanner scanner, ArrayList<InventoryItem> inventory) {
-        System.out.println("Enter the number of the item to be removed.");
-        String remove = scanner.nextLine();
-        int removeInt = Integer.valueOf(remove);
-        inventory.remove(removeInt - 1);
-    }
-
-    public static void updateQuantity (Scanner scanner, ArrayList<InventoryItem> inventory) {
-        System.out.println("Enter the number of the item to be updated.");
-        String update = scanner.nextLine();
-        int updateInt = Integer.valueOf(update);
-        System.out.println("Enter the new quantity.");
-        String quant = scanner.nextLine();
-        InventoryItem updateName = inventory.get(updateInt - 1);
-        updateName.quantity = Integer.valueOf(quant);
-    }
-
-
     public static void main(String[] args) {
 
         ArrayList<InventoryItem> inventory = new ArrayList<>();
-
-//        InventoryItem item1 = new InventoryItem("apples", 10, "Fruit");
-//        inventory.add(item1);
-//        InventoryItem item2 = new InventoryItem("bananas", 5, "Fruit");
-//        inventory.add(item2);
 
         while (true) {
 
             System.out.println("Here is your inventory: ");
 
             for (InventoryItem item : inventory) {
-                System.out.printf("%s.) %s [%s]\n", (inventory.indexOf(item) + 1), item.itemName, item.quantity);
+                System.out.printf("%s.) %s [%s] - %s\n", (inventory.indexOf(item) + 1), item.itemName, item.quantity,
+                item.category);
             }
 
             System.out.println("What would you like to do? Enter a number:");
-            // add createItem() method & option
-            System.out.println("1. Create a new item");
+            System.out.println("1. Enter a new item");
             System.out.println("2. Remove an item");
             System.out.println("3. Update item quantity");
 
